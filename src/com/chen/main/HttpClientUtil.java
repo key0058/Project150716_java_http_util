@@ -177,12 +177,13 @@ public class HttpClientUtil {
 
 	}
 	
-	
 	public static void main(String[] args) {
-		String url = "http://www.baidu.com";
+		String url = "https://api.bmob.cn/1/classes/Video?where={\"type\":\"cooking\"}";
 		Map<String, String> headerObjects = new HashMap<String, String>();
-		headerObjects.put("Content-Type", "application/x-www-form-urlencoded");
-		HttpClientUtil.sendHttpRequest(HttpClientUtil.REQUEST_METHOD_GET, url, null, headerObjects);
+		headerObjects.put("X-Bmob-Application-Id", "8cd3d14a8aba3ed604857566054d9bde");
+	    headerObjects.put("X-Bmob-REST-API-Key", "539a161c3836483ca1a4aa3e1623dc7c");
+	    headerObjects.put("Content-Type", "application/json");
+	    HttpClientUtil.sendHttpsRequest(HttpClientUtil.REQUEST_METHOD_GET, url, null, headerObjects);
 	}
 
 }
