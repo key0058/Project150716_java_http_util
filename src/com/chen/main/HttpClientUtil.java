@@ -8,7 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -178,12 +177,8 @@ public class HttpClientUtil {
 	}
 	
 	public static void main(String[] args) {
-		String url = "https://api.bmob.cn/1/classes/Video?where={\"type\":\"cooking\"}";
-		Map<String, String> headerObjects = new HashMap<String, String>();
-		headerObjects.put("X-Bmob-Application-Id", "8cd3d14a8aba3ed604857566054d9bde");
-	    headerObjects.put("X-Bmob-REST-API-Key", "539a161c3836483ca1a4aa3e1623dc7c");
-	    headerObjects.put("Content-Type", "application/json");
-	    HttpClientUtil.sendHttpsRequest(HttpClientUtil.REQUEST_METHOD_GET, url, null, headerObjects);
+		String url = "http://dcimg.awalker.jp/img2.php?sec_key=wUyCHvblzLzzDHZTcHimHIltvA0xBf71nCdx7EQ5050rTuc3cDAYeIWrsqrEDPYF9OWpivRms0w2TptFsX5SNMdvteuyL28EEiEst9mOQSDx0fmuBXPgWPBHQFya69VgFAbd2qqS8Pc3d5DwkcarB62hVphNJLZVUGbc0gFqvHjHcbiwSV89su218bWiMHW07kzWeWWG";
+	    HttpClientUtil.sendHttpRequest(HttpClientUtil.REQUEST_METHOD_GET, url, null, null);
 	}
 
 }
